@@ -46,14 +46,17 @@ It contains:
 - Transaction hashes: Not recorded.
 
 ## Screenshots
-1. `../screenshots/SimpleStorage-code.png`
-2. `../screenshots/SimpleStorage-compile.png`
-3. `../screenshots/SimpleStorage-deploy1.png`
-4. `../screenshots/SimpleStorage-deploy2.png`
-5. `../screenshots/SimpleStorage-test.png`
-6. `../screenshots/SimpleStorage-test2.png`
-7. `../screenshots/SimpleStorage-test3.png`
-8. `../screenshots/SimpleStorage-transaction.png`
+
+All screenshots for this practical are stored in `screenshots/simple-storage/`.
+
+1. `../screenshots/simple-storage/SimpleStorage-code.png` – Solidity source code.
+2. `../screenshots/simple-storage/SimpleStorage-compile.png` – Successful compilation.
+3. `../screenshots/simple-storage/SimpleStorage-deploy1.png` – Contract deployment.
+4. `../screenshots/simple-storage/SimpleStorage-deploy2.png` – Deployment details.
+5. `../screenshots/simple-storage/SimpleStorage-test.png` – Initial and updated value testing.
+6. `../screenshots/simple-storage/SimpleStorage-test2.png` – Transaction cost details.
+7. `../screenshots/simple-storage/SimpleStorage-test3.png` – Execution cost details.
+8. `../screenshots/simple-storage/SimpleStorage-transaction.png` – Transaction evidence.
 
 ## Conclusion
 The SimpleStorage smart contract was successfully compiled and deployed in Remix IDE. The setNumber() function successfully updated the stored value from 100 to 250, and getNumber() returned 250.
