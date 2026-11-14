@@ -78,22 +78,6 @@ It contains:
 - Network: Remix JavaScript VM (Osaka).
 - Transaction hashes: Not recorded.
 
-### Sepolia Testnet
-- Network: Sepolia Ethereum Testnet.
-- Chain ID: 11155111.
-- Deployer address: `0x2EeE62D847B0226fB92C981F279ebEcaE762497C`
-- Contract address: `0x979caaa7726fc381ebc3f5e8b9241299b6ebe43c`
-- Initial constructor argument: 100.
-- Updated value: 250.
-
-**Deployment Transaction Hash:**
-
-`0x15655cbe702c5c04acb9889f83a935fa6a9936394de686ff0d459d5eff0e0459`
-
-**setNumber() Transaction Hash:**
-
-`0x78606c9c8d572b2ae3544dc1ef035488ad8b2adadb6c4a1a78c79232a44ef9ff`
-
 **Verification:** The deployment and update transactions were successful on Sepolia Etherscan. The final `getNumber()` call returned 250.
 
 ## Screenshots
