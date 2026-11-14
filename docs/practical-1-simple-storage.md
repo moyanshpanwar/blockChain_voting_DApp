@@ -1,10 +1,11 @@
-
 # Practical 1: Simple Storage Smart Contract
 
 ## Aim
+
 To create, compile, deploy and test a Solidity smart contract using Remix IDE, first in Remix JavaScript VM and then on the Sepolia Ethereum testnet.
 
 ## Software and Tools
+
 - Remix Desktop IDE
 - Remix Web IDE
 - Solidity compiler 0.8.20
@@ -15,9 +16,11 @@ To create, compile, deploy and test a Solidity smart contract using Remix IDE, f
 - Sepolia Etherscan
 
 ## Smart Contract
+
 The contract is named `SimpleStorage.sol`.
 
 It contains:
+
 1. A private uint256 state variable named `number`.
 2. A constructor to initialize the number.
 3. A `setNumber()` function to update the value.
@@ -26,6 +29,7 @@ It contains:
 ## Procedure
 
 ### Part A: Deployment Using Remix JavaScript VM
+
 1. Open Remix Desktop IDE.
 2. Create `SimpleStorage.sol`.
 3. Write the Solidity smart contract.
@@ -37,6 +41,7 @@ It contains:
 9. Call `getNumber()` to verify the updated value.
 
 ### Part B: Deployment Using Sepolia Testnet
+
 1. Open Remix Web IDE.
 2. Connect MetaMask using WalletConnect.
 3. Select the Sepolia test network.
@@ -72,6 +77,7 @@ It contains:
 ## Transaction Details
 
 ### Remix JavaScript VM
+
 - Deployment constructor argument: 100 (hexadecimal: `0x64`).
 - `setNumber()` transaction argument: 250 (hexadecimal: `0xfa`).
 - `getNumber()` returned: 250.
@@ -86,24 +92,57 @@ All screenshots are stored in `screenshots/simple-storage/`.
 
 ### A. Remix VM Deployment and Testing
 
-1. `SimpleStorage-code.png` – Solidity source code.
-2. `SimpleStorage-compile.png` – Successful compilation.
-3. `SimpleStorage-deploy1.png` – Contract deployment.
-4. `SimpleStorage-deploy2.png` – Deployment details.
-5. `SimpleStorage-test.png` – Initial and updated value testing.
-6. `SimpleStorage-test2.png` – Transaction cost details.
-7. `SimpleStorage-test3.png` – Execution cost details.
-8. `SimpleStorage-transaction.png` – Transaction evidence.
+**1. Solidity Source Code**
+
+![SimpleStorage Solidity source code](../screenshots/simple-storage/SimpleStorage-code.png)
+
+**2. Successful Compilation**
+
+![SimpleStorage compilation](../screenshots/simple-storage/SimpleStorage-compile.png)
+
+**3. Contract Deployment**
+
+![SimpleStorage deployment - Part 1](../screenshots/simple-storage/SimpleStorage-deploy1.png)
+
+![SimpleStorage deployment - Part 2](../screenshots/simple-storage/SimpleStorage-deploy2.png)
+
+**4. Contract Testing**
+
+![SimpleStorage testing - Part 1](../screenshots/simple-storage/SimpleStorage-test.png)
+
+![SimpleStorage testing - Part 2](../screenshots/simple-storage/SimpleStorage-test2.png)
+
+![SimpleStorage testing - Part 3](../screenshots/simple-storage/SimpleStorage-test3.png)
+
+**5. Transaction Evidence**
+
+![SimpleStorage transaction evidence](../screenshots/simple-storage/SimpleStorage-transaction.png)
 
 ### B. Sepolia Testnet Deployment and Testing
 
-1. `SimpleStorage-Sepolia-deploy1.png` – Contract deployment on Sepolia.
-2. `SimpleStorage-Sepolia-deploy-transaction1.png` – Deployment transaction evidence.
-3. `SimpleStorage-Sepolia-deploy-transaction2.png` – Deployment transaction details.
-4. `SimpleStorage-Sepolia-test1.png` – Contract testing on Sepolia.
-5. `SimpleStorage-Sepolia-test1-transaction1.png` – `setNumber()` transaction evidence.
-6. `SimpleStorage-Sepolia-test1-transaction2.png` – Transaction details on Etherscan.
-7. `SimpleStorage-Sepolia-transactions.png` – Sepolia wallet transaction history.
+**1. Contract Deployment**
+
+![SimpleStorage Sepolia deployment](../screenshots/simple-storage/SimpleStorage-Sepolia-deploy1.png)
+
+**2. Deployment Transaction Evidence**
+
+![SimpleStorage Sepolia deployment transaction - Part 1](../screenshots/simple-storage/SimpleStorage-Sepolia-deploy-transaction1.png)
+
+![SimpleStorage Sepolia deployment transaction - Part 2](../screenshots/simple-storage/SimpleStorage-Sepolia-deploy-transaction2.png)
+
+**3. Contract Testing**
+
+![SimpleStorage Sepolia testing](../screenshots/simple-storage/SimpleStorage-Sepolia-test1.png)
+
+**4. Testing Transaction Evidence**
+
+![SimpleStorage Sepolia testing transaction - Part 1](../screenshots/simple-storage/SimpleStorage-Sepolia-test1-transaction1.png)
+
+![SimpleStorage Sepolia testing transaction - Part 2](../screenshots/simple-storage/SimpleStorage-Sepolia-test1-transaction2.png)
+
+**5. Sepolia Transaction History**
+
+![SimpleStorage Sepolia wallet transaction history](../screenshots/simple-storage/SimpleStorage-Sepolia-transactions.png)
 
 ## Conclusion
 
