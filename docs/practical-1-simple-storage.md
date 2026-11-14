@@ -51,6 +51,9 @@ It contains:
 3. `../screenshots/SimpleStorage-deploy1.png`
 4. `../screenshots/SimpleStorage-deploy2.png`
 5. `../screenshots/SimpleStorage-test.png`
+6. `../screenshots/SimpleStorage-test2.png`
+7. `../screenshots/SimpleStorage-test3.png`
+8. `../screenshots/SimpleStorage-transaction.png`
 
 ## Conclusion
 The SimpleStorage smart contract was successfully compiled and deployed in Remix IDE. The setNumber() function successfully updated the stored value from 100 to 250, and getNumber() returned 250.
