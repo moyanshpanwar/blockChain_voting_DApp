@@ -31,7 +31,7 @@ Designed, deployed, and tested a Solidity-based smart contract using Remix IDE.
 
 ### Practical 2: Decentralized Voting DApp
 
-**Status: Upcoming**
+**Status: Completed**
 
 Developing a decentralized voting application that demonstrates blockchain-based voting and transparent result management.
 
