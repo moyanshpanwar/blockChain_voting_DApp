@@ -39,7 +39,7 @@ It contains:
 ### Part B: Deployment Using Sepolia Testnet
 1. Open Remix Web IDE.
 2. Connect MetaMask using WalletConnect.
-3. Select the Sepolia test network (Chain ID: 11155111).
+3. Select the Sepolia test network.
 4. Ensure the wallet has sufficient Sepolia test ETH.
 5. Upload and compile `SimpleStorage.sol`.
 6. Deploy the contract with an initial constructor value of 100.
