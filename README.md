@@ -119,3 +119,26 @@ blockChain_voting_DApp/
 
 ---
 
+
+## Blockchain Transaction & Verification Links
+
+The following links provide access to the blockchain transactions and contract verification records generated during the development and testing of this project on the Ethereum Sepolia Testnet.
+
+### Practical 1 – Simple Storage
+- [View SimpleStorage Deployment](https://eth-sepolia.blockscout.com/)
+- [View Stored Value Update Transaction](https://eth-sepolia.blockscout.com/)
+
+### Practical 2 – Voting Smart Contract
+- [View Voting Smart Contract Deployment](https://eth-sepolia.blockscout.com/)
+
+### Practical 3 – VOTEX Frontend Integration
+- [View Deployed Voting Smart Contract](https://eth-sepolia.blockscout.com/address/0x8e75689c6a58A9051bb692526B113aB40b2cdaC3)
+- [View Verified Contract Source Code on Sourcify](https://repo.sourcify.dev/11155111/0x8e75689c6a58A9051bb692526B113aB40b2cdaC3/)
+
+### Practical 4 – DApp Testing
+- [View Successful Voting Transaction](https://eth-sepolia.blockscout.com/tx/0x2da6ad6aca459951dde7302e0885358f693b388f0b9d08894cec915e33e55e7e)
+
+### Blockchain Explorer
+- [Ethereum Sepolia Block Explorer – Blockscout](https://eth-sepolia.blockscout.com/)
+
+*Note: Local development transactions performed using Remix VM are not available on public blockchain explorers.*
