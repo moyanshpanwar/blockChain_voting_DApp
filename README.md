@@ -1,4 +1,4 @@
-# blockChain_voting_DApp
+# BlockChain_Voting_DApp
 
 ## Project Overview
 
