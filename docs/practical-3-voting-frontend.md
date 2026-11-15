@@ -108,25 +108,31 @@ Implemented application-level error handling for common situations, including:
 
 Displays the professional frontend dashboard, including election statistics and candidate information.
 
-![VOTEX Dashboard](../screenshots/voting-frontend/voting-dashboard.png)
+![VOTEX Dashboard](../screenshots/voting-frontend/voting-frontend-dashboard.png)
 
 ### 2. MetaMask Wallet Connection
 
 Demonstrates successful wallet connection and the detected Sepolia network.
 
-![Wallet Connected](../screenshots/voting-frontend/voting-wallet-connected.png)
+![Wallet Connected](../screenshots/voting-frontend/voting-frontend-dashboard-walletConnect.png)
 
 ### 3. Successful Voting Transaction
 
-Shows the successful voting process and transaction confirmation through MetaMask.
+Shows the successful voting process and transaction confirmation.
 
-![Successful Voting Transaction](../screenshots/voting-frontend/voting-successful-transaction.png)
+![Successful Voting Transaction](../screenshots/voting-frontend/voting-frontend-dashboard-successfulVoting.png)
 
 ### 4. Updated Election Results
 
-Displays the updated candidate vote counts and the already-voted status after successful transaction confirmation.
+Displays updated candidate vote counts and the already-voted status after successful transaction confirmation.
 
-![Updated Election Results](../screenshots/voting-frontend/voting-updated-results.png)
+![Updated Election Results](../screenshots/voting-frontend/voting-frontend-dashboard-updatedResults.png)
+
+### 5. Candidate Information
+
+Displays the candidate cards and information retrieved from the deployed smart contract.
+
+![Candidate Information](../screenshots/voting-frontend/voting-frontend-dashboard-candidates.png)
 
 ## Testing and Verification
 
