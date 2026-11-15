@@ -4,6 +4,19 @@
 
 A blockchain-based project developed as part of the Blockchain Technology laboratory coursework, exploring smart contract development, deployment, and decentralized application architecture using the Ethereum ecosystem.
 
+## Testnet Resources
+
+The VOTEX DApp uses the **Ethereum Sepolia Testnet** for deployment and transaction testing. Sepolia ETH is required to pay gas fees when interacting with the smart contract.
+
+### Sepolia ETH Faucet
+
+- **Google Cloud Web3 Faucet:** https://cloud.google.com/application/web3/faucet/ethereum/sepolia
+- Provides free test ETH for Ethereum Sepolia.
+- Each Google Account and wallet address is eligible for one drip every 24 hours.
+- Test ETH has no real monetary value and is intended only for development and testing.
+
+**Note:** Faucet availability and eligibility restrictions may apply. If a request is temporarily unavailable, try again after the cooldown period.
+
 ## Project Progress
 
 ### Practical 1: Simple Storage Smart Contract
