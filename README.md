@@ -79,10 +79,13 @@ blockChain_voting_DApp/
 ├── contracts/
 │   ├── SimpleStorage.sol
 │   └── Voting.sol
+│
 ├── docs/
 │   ├── practical-1-simple-storage.md
 │   ├── practical-2-voting.md
-│   └── practical-3-voting-frontend.md
+│   ├── practical-3-voting-frontend.md
+│   └── practical-4-DApp-testing.md
+│
 ├── frontend/
 │   ├── index.html
 │   ├── css/
@@ -90,15 +93,16 @@ blockChain_voting_DApp/
 │   └── js/
 │       ├── contract.js
 │       └── app.js
+│
 ├── screenshots/
 │   ├── simple-storage/
 │   ├── voting/
-│   └── voting-frontend/
+│   ├── voting-frontend/
+│   └── Testing-DApp/
+│
 ├── .gitignore
 └── README.md
 ```
-
-*Additional smart contracts, frontend components, and documentation will be added as development progresses.*
 
 ## Development Roadmap
 
