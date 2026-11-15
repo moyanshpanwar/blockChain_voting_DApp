@@ -122,23 +122,27 @@ blockChain_voting_DApp/
 
 ## Blockchain Transaction & Verification Links
 
-The following links provide access to the blockchain transactions and contract verification records generated during the development and testing of this project on the Ethereum Sepolia Testnet.
+The following resources provide access to blockchain transaction records, deployed smart contracts, and source-code verification associated with the development and testing of this project on the Ethereum Sepolia Testnet.
 
 ### Practical 1 – Simple Storage
-- [View SimpleStorage Deployment](https://eth-sepolia.blockscout.com/)
-- [View Stored Value Update Transaction](https://eth-sepolia.blockscout.com/)
+
+- [Sepolia Block Explorer](https://eth-sepolia.blockscout.com/) – Used to search for and inspect the SimpleStorage contract deployment and stored-value update transactions.
 
 ### Practical 2 – Voting Smart Contract
-- [View Voting Smart Contract Deployment](https://eth-sepolia.blockscout.com/)
+
+- [Sepolia Block Explorer](https://eth-sepolia.blockscout.com/) – Used to search for and inspect the Voting smart contract deployment and its blockchain activity.
 
 ### Practical 3 – VOTEX Frontend Integration
-- [View Deployed Voting Smart Contract](https://eth-sepolia.blockscout.com/address/0x8e75689c6a58A9051bb692526B113aB40b2cdaC3)
-- [View Verified Contract Source Code on Sourcify](https://repo.sourcify.dev/11155111/0x8e75689c6a58A9051bb692526B113aB40b2cdaC3/)
+
+- [Voting Smart Contract on Blockscout](https://eth-sepolia.blockscout.com/address/0x8e75689c6a58A9051bb692526B113aB40b2cdaC3) – Used to inspect the deployed Voting smart contract, its transaction history, and on-chain activity.
+- [Verified Contract Source Code on Sourcify](https://repo.sourcify.dev/11155111/0x8e75689c6a58A9051bb692526B113aB40b2cdaC3/) – Used to verify the deployed smart contract source code against its on-chain bytecode.
 
 ### Practical 4 – DApp Testing
-- [View Successful Voting Transaction](https://eth-sepolia.blockscout.com/tx/0x2da6ad6aca459951dde7302e0885358f693b388f0b9d08894cec915e33e55e7e)
 
-### Blockchain Explorer
-- [Ethereum Sepolia Block Explorer – Blockscout](https://eth-sepolia.blockscout.com/)
+- [Successful Voting Transaction on Blockscout](https://eth-sepolia.blockscout.com/tx/0x2da6ad6aca459951dde7302e0885358f693b388f0b9d08894cec915e33e55e7e) – Used to verify the successful voting transaction, transaction status, gas consumption, and emitted voting event.
 
-*Note: Local development transactions performed using Remix VM are not available on public blockchain explorers.*
+### General Blockchain Resource
+
+- [Ethereum Sepolia Block Explorer – Blockscout](https://eth-sepolia.blockscout.com/) – Provides access to blockchain blocks, transactions, smart contracts, and network activity.
+
+**Note:** Transactions performed using Remix JavaScript VM are local development transactions and cannot be inspected through public blockchain explorers. The Sepolia Testnet is used for public transaction verification without spending real ETH.
