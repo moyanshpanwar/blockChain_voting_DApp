@@ -63,20 +63,24 @@ Developing a decentralized voting application that demonstrates blockchain-based
 
 ```text
 blockChain_voting_DApp/
-│
 ├── contracts/
-│   └── SimpleStorage.sol
-│
+│   ├── SimpleStorage.sol
+│   └── Voting.sol
 ├── docs/
-│   └── practical-1-simple-storage.md
-│
+│   ├── practical-1-simple-storage.md
+│   ├── practical-2-voting.md
+│   └── practical-3-voting-frontend.md
 ├── frontend/
+│   ├── index.html
 │   ├── css/
+│   │   └── style.css
 │   └── js/
-│
+│       ├── contract.js
+│       └── app.js
 ├── screenshots/
-│   └── simple-storage/
-│
+│   ├── simple-storage/
+│   ├── voting/
+│   └── voting-frontend/
 ├── .gitignore
 └── README.md
 ```
