@@ -2,16 +2,17 @@
 
 ## Project Overview
 
-A blockchain-based project developed as part of the Blockchain Technology laboratory coursework, exploring smart contract development, deployment, and decentralized application architecture using the Ethereum ecosystem.
+VOTEX is a blockchain-based decentralized voting application developed as part of the Blockchain Technology laboratory coursework. The project explores Solidity smart contract development, Ethereum testnet deployment, wallet integration, frontend development, and blockchain transaction verification.
+
+The application enables users to connect an Ethereum wallet, view candidates, cast a vote, and verify voting results recorded on the blockchain.
 
 ## Testnet Resources
 
-The VOTEX DApp uses the **Ethereum Sepolia Testnet** for deployment and transaction testing. Sepolia ETH is required to pay gas fees when interacting with the smart contract.
+The VOTEX DApp is deployed and tested on the **Ethereum Sepolia Testnet**. Sepolia ETH is required to pay gas fees when interacting with the smart contract.
 
 ### Sepolia ETH Faucet
 
-- **Google Cloud Web3 Faucet:** https://cloud.google.com/application/web3/faucet/ethereum/sepolia
-- Provides free test ETH for Ethereum Sepolia.
+- **[Google Cloud Web3 Faucet](https://cloud.google.com/application/web3/faucet/ethereum/sepolia)** – Provides free test ETH for Ethereum Sepolia.
 - Each Google Account and wallet address is eligible for one drip every 24 hours.
 - Test ETH has no real monetary value and is intended only for development and testing.
 
@@ -30,8 +31,8 @@ Designed, deployed, and tested a Solidity-based smart contract using Remix IDE.
 - Developed a smart contract using Solidity with state variables, constructors, and functions.
 - Implemented state modification and data retrieval using `setNumber()` and `getNumber()`.
 - Compiled and deployed the contract using Remix JavaScript VM.
-- Deployed and tested the contract on the Ethereum Sepolia testnet.
-- Verified smart contract deployment and transactions using Etherscan.
+- Deployed and tested the contract on the Ethereum Sepolia Testnet.
+- Verified contract deployment and blockchain transactions using a block explorer.
 
 **Testing and Validation:**
 
@@ -40,37 +41,100 @@ Designed, deployed, and tested a Solidity-based smart contract using Remix IDE.
 - Verified the updated state through read-only contract interaction.
 - Tested contract functionality in both local virtual and public testnet environments.
 
-**Documentation:** Practical procedures, observations, transaction evidence, and screenshots are maintained in the project repository.
-
-### Practical 2: Decentralized Voting DApp
+### Practical 2: Decentralized Voting Smart Contract
 
 **Status: Completed**
 
-Developing a decentralized voting application that demonstrates blockchain-based voting and transparent result management.
+Designed and deployed a Solidity-based voting smart contract that records votes on the Ethereum blockchain.
 
-**Planned Features:**
+**Key Implementations:**
 
-- Solidity-based voting smart contract.
-- Candidate registration and management.
-- Voting period management.
-- MetaMask wallet integration.
-- One-vote-per-wallet enforcement.
-- Duplicate-vote prevention.
-- On-chain vote counting and result retrieval.
-- Interactive and responsive web interface.
+- Created a `Candidate` structure to store candidate information and vote counts.
+- Initialized three candidates through the contract constructor.
+- Implemented voting functionality using `vote()`.
+- Implemented candidate information retrieval using `getCandidate()`.
+- Implemented candidate count retrieval using `getCandidateCount()`.
+- Used a mapping to prevent an Ethereum address from voting more than once.
+- Implemented `hasVoted()` to check whether an address has already voted.
+- Emitted a `VoteCast` event when a vote is successfully recorded.
+
+**Testing and Validation:**
+
+- Tested candidate information retrieval.
+- Verified successful voting from different accounts.
+- Tested duplicate-vote prevention.
+- Tested invalid candidate ID rejection.
+- Verified emitted voting events and updated vote counts.
+
+### Practical 3: VOTEX Frontend Integration
+
+**Status: Completed**
+
+Developed a professional web interface and integrated it with the deployed voting smart contract.
+
+**Key Implementations:**
+
+- Created a responsive frontend using HTML, CSS, and JavaScript.
+- Integrated MetaMask wallet connectivity.
+- Used Ethers.js to interact with the deployed smart contract.
+- Implemented Ethereum Sepolia network detection.
+- Displayed candidate information and live voting results.
+- Implemented wallet-based voting and transaction confirmation.
+- Displayed transaction status and voting eligibility.
+- Disabled voting options after an account successfully voted.
+- Added handling for wallet connection issues, rejected transactions, and incorrect network selection.
+
+**Testing and Validation:**
+
+- Successfully connected MetaMask to the VOTEX application.
+- Retrieved candidate information from the deployed contract.
+- Cast a vote through the frontend.
+- Verified transaction confirmation and updated voting results.
+- Confirmed that an account could not vote again through the frontend.
+
+### Practical 4: Testing and Analysis of the Voting DApp
+
+**Status: Completed**
+
+Performed functional testing and analysis of the deployed voting DApp on the Ethereum Sepolia Testnet.
+
+**Experiments Conducted:**
+
+- **Experiment A – Successful Voting:** Verified successful voting, transaction confirmation, gas consumption, and updated candidate vote count.
+- **Experiment B – Duplicate Voting:** Tested duplicate-vote prevention and verified that an already-voted account could not vote again.
+- **Experiment C – Voting from Another Account:** Used a second funded Ethereum account to cast a vote successfully.
+- **Experiment D – Invalid Candidate ID:** Tested an invalid candidate ID and verified that the transaction was rejected before submission.
+
+**Final Voting Results After Experiment C:**
+
+| Candidate | Votes |
+|---|---:|
+| Candidate A | 1 |
+| Candidate B | 1 |
+| Candidate C | 0 |
+| **Total Votes** | **2** |
+
+**Testing Evidence:**
+
+- Transaction hashes and gas usage.
+- Blockchain event verification.
+- Screenshots of wallet connection and voting activity.
+- Screenshots of successful voting and updated results.
+- Evidence of duplicate-vote prevention and invalid candidate rejection.
 
 ## Technology Stack
 
-| Category                | Technologies            |
-| ----------------------- | ----------------------- |
-| Smart Contracts         | Solidity                |
-| Development Environment | Remix IDE               |
-| Blockchain Network      | Ethereum                |
-| Test Network            | Sepolia                 |
-| Wallet Integration      | MetaMask, WalletConnect |
-| Frontend                | HTML, CSS, JavaScript   |
-| Blockchain Interaction  | Ethers.js               |
-| Version Control         | Git, GitHub             |
+| Category | Technologies |
+|---|---|
+| Smart Contracts | Solidity |
+| Development Environment | Remix IDE |
+| Blockchain Network | Ethereum |
+| Test Network | Sepolia |
+| Wallet Integration | MetaMask, WalletConnect |
+| Frontend | HTML, CSS, JavaScript |
+| Blockchain Interaction | Ethers.js |
+| Version Control | Git, GitHub |
+| Block Explorer | Blockscout |
 
 ## Repository Structure
 
@@ -106,31 +170,31 @@ blockChain_voting_DApp/
 
 ## Development Roadmap
 
-- [ ] Develop and compile SimpleStorage smart contract.
-- [ ] Deploy and test using Remix JavaScript VM.
-- [ ] Deploy and test using Ethereum Sepolia testnet.
-- [ ] Verify contract functionality and transaction execution.
-- [ ] Document implementation and testing results.
-- [ ] Develop decentralized voting smart contract.
-- [ ] Implement voting DApp frontend.
-- [ ] Integrate MetaMask and Ethers.js.
-- [ ] Test voting functionality and duplicate-vote prevention.
-- [ ] Deploy and demonstrate the completed voting application.
+- Develop and compile the SimpleStorage smart contract.
+- Deploy and test using Remix JavaScript VM.
+- Deploy and test using Ethereum Sepolia Testnet.
+- Verify contract functionality and transaction execution.
+- Document implementation and testing results.
+- Develop the decentralized voting smart contract.
+- Implement the VOTEX frontend.
+- Integrate MetaMask and Ethers.js.
+- Test voting functionality and duplicate-vote prevention.
+- Deploy and demonstrate the completed voting application.
+- Perform functional testing and document the results.
 
 ---
 
-
 ## Blockchain Transaction & Verification Links
 
-The following resources provide access to blockchain transaction records, deployed smart contracts, and source-code verification associated with the development and testing of this project on the Ethereum Sepolia Testnet.
+The following resources provide access to blockchain transaction records, deployed smart contracts, and source-code verification associated with the project on the Ethereum Sepolia Testnet.
 
 ### Practical 1 – Simple Storage
 
-- [Sepolia Block Explorer](https://eth-sepolia.blockscout.com/) – Used to search for and inspect the SimpleStorage contract deployment and stored-value update transactions.
+- [Sepolia Block Explorer – Blockscout](https://eth-sepolia.blockscout.com/) – Used to search for and inspect the SimpleStorage contract deployment and stored-value update transactions.
 
 ### Practical 2 – Voting Smart Contract
 
-- [Sepolia Block Explorer](https://eth-sepolia.blockscout.com/) – Used to search for and inspect the Voting smart contract deployment and its blockchain activity.
+- [Sepolia Block Explorer – Blockscout](https://eth-sepolia.blockscout.com/) – Used to search for and inspect the Voting smart contract deployment and its blockchain activity.
 
 ### Practical 3 – VOTEX Frontend Integration
 
@@ -139,10 +203,15 @@ The following resources provide access to blockchain transaction records, deploy
 
 ### Practical 4 – DApp Testing
 
-- [Successful Voting Transaction on Blockscout](https://eth-sepolia.blockscout.com/tx/0x2da6ad6aca459951dde7302e0885358f693b388f0b9d08894cec915e33e55e7e) – Used to verify the successful voting transaction, transaction status, gas consumption, and emitted voting event.
+- [Successful Voting Transaction – Candidate A](https://eth-sepolia.blockscout.com/tx/0x2da6ad6aca459951dde7302e0885358f693b388f0b9d08894cec915e33e55e7e) – Used to verify the successful voting transaction, transaction status, gas consumption, and emitted voting event.
+- [Successful Voting Transaction – Candidate B](https://eth-sepolia.blockscout.com/tx/0x1d98b18c4ec0394595900963f5e88b08da2cd8b4af0d359e41597206ba21613a) – Used to verify voting from the second Ethereum account and inspect its transaction details and voting event.
 
 ### General Blockchain Resource
 
 - [Ethereum Sepolia Block Explorer – Blockscout](https://eth-sepolia.blockscout.com/) – Provides access to blockchain blocks, transactions, smart contracts, and network activity.
 
 **Note:** Transactions performed using Remix JavaScript VM are local development transactions and cannot be inspected through public blockchain explorers. The Sepolia Testnet is used for public transaction verification without spending real ETH.
+
+## Project Status
+
+**VOTEX development, Sepolia deployment, frontend integration, and all four practical testing exercises have been completed.**
