@@ -1,5 +1,9 @@
 # BlockChain_Voting_DApp
 
+## Contributer
+
+**Name -- MOYANSH PANWAR**
+
 ## Project Overview
 
 VOTEX is a blockchain-based decentralized voting application developed as part of the Blockchain Technology laboratory coursework. The project explores Solidity smart contract development, Ethereum testnet deployment, wallet integration, frontend development, and blockchain transaction verification.
