@@ -1,4 +1,4 @@
-# Practical 4: Decentralized Voting DApp — Test and analyse the voting DApp
+# Practical 4: Decentralized Voting DApp — Test and Analyse the Voting DApp
 
 ## Aim
 
@@ -14,6 +14,7 @@ To test and analyse the Decentralized Voting DApp by performing successful votin
 - Blockscout Explorer
 - Visual Studio Code
 - Live Server Extension
+- ethers.js
 
 ## Testing Environment
 
@@ -57,7 +58,7 @@ To verify that a connected Ethereum account can successfully vote for a candidat
 
 ### Transaction Details
 
-**Transaction Verification:** [View transaction on Blockscout](https://eth-sepolia.blockscout.com/tx/0x2da6ad6aca459951dde7302e0885358f693b388f0b9d08894cec915e33e55e7e)
+**Transaction Verification:** [View Successful Voting Transaction on Blockscout](https://eth-sepolia.blockscout.com/tx/0x2da6ad6aca459951dde7302e0885358f693b388f0b9d08894cec915e33e55e7e)
 
 ### Screenshots
 
@@ -75,7 +76,7 @@ To verify that a connected Ethereum account can successfully vote for a candidat
 
 ### Result
 
-The successful voting experiment was completed. The transaction was confirmed on the Sepolia Testnet, and the candidate's vote count was updated correctly.
+The successful voting experiment was completed. The transaction was confirmed on the Sepolia Testnet, and Candidate A's vote count was updated correctly.
 
 ---
 
@@ -110,7 +111,7 @@ To verify that an Ethereum account cannot cast more than one vote in the electio
 
 Duplicate voting prevention was verified. The frontend disabled further voting options, and the smart contract confirmed that the account had already voted.
 
-Note: A second transaction was not submitted because the frontend prevented the attempt. The contract's duplicate-voting restriction was independently checked using `hasVoted(address)`.
+**Note:** A second transaction was not submitted because the frontend prevented the attempt. The contract's duplicate-voting restriction was independently checked using `hasVoted(address)`. Duplicate-voting rejection was also tested separately using Remix VM.
 
 ---
 
@@ -124,32 +125,82 @@ To verify that a different Ethereum account, which has not previously voted, can
 
 1. Created a second Ethereum account in MetaMask.
 2. Switched MetaMask to the newly created account.
-3. Reconnected the VOTEX application using the second account.
-4. Verified that the new account was eligible to vote.
-5. Attempted to obtain Sepolia test ETH to fund the voting transaction.
+3. Obtained Sepolia test ETH through the Google Cloud Web3 Faucet.
+4. Connected the VOTEX application using the second account.
+5. Verified that the second account was eligible to vote.
+6. Selected Candidate B from the available candidates.
+7. Confirmed the voting transaction through MetaMask.
+8. Waited for transaction confirmation.
+9. Verified the successful voting event and transaction details using Blockscout.
+10. Checked the updated voting results on the VOTEX frontend.
 
 ### Observations
 
-- The second account was successfully connected to VOTEX.
+- The second Ethereum account was successfully connected to VOTEX.
 - The frontend recognized the account as eligible to vote.
-- The account initially had zero Sepolia ETH.
-- The Google Cloud Sepolia Faucet indicated a 24-hour request cooldown.
+- Sepolia test ETH was successfully obtained to fund the transaction.
+- The second account successfully voted for Candidate B.
+- The blockchain recorded the `VoteCast` event.
+- The event confirmed that Candidate B received the vote.
+- Candidate B's vote count increased by one.
 
-**Test Status:** Pending. The second account must receive Sepolia test ETH before a voting transaction can be submitted and verified.
+### Transaction Details
+
+**Transaction Verification:** [View Second Voting Transaction on Blockscout](https://eth-sepolia.blockscout.com/tx/0x1d98b18c4ec0394595900963f5e88b08da2cd8b4af0d359e41597206ba21613a)
+
+### Blockchain Event Verification
+
+The `VoteCast` event was verified through Blockscout with the following information:
+
+| Event Field | Recorded Value |
+|---|---|
+| Event Name | VoteCast |
+| Candidate ID | 2 |
+| Candidate Name | Candidate B |
+| Voter | Second Ethereum Account |
+
+This confirms that the second account successfully cast a vote for Candidate B and that the transaction was recorded on the blockchain.
+
+### Final Voting Results
+
+| Candidate | Votes |
+|---|---:|
+| Candidate A | 1 |
+| Candidate B | 1 |
+| Candidate C | 0 |
+| **Total Votes** | **2** |
 
 ### Screenshots
 
-<!-- Add Experiment C screenshots here after completing the test. -->
+**1. Second account funded with Sepolia test ETH**
 
-<!-- ![Second account connected](../screenshots/Testing-DApp/Testing-secondAccountConnected.png) -->
+![Second account funded](../screenshots/Testing-DApp/Testing-secondAccount-coins.png)
 
-<!-- ![Second account successful vote](../screenshots/Testing-DApp/Testing-secondAccountSuccessfulVote.png) -->
+**2. Second account voting through VOTEX**
 
-<!-- ![Updated voting results](../screenshots/Testing-DApp/Testing-secondAccountUpdatedResults.png) -->
+![Second account voting](../screenshots/Testing-DApp/Testing-SecondAccountVote.png)
+
+**3. Second account transaction details**
+
+![Second account transaction details](../screenshots/Testing-DApp/Testing-secondAccountVoteDetails.png)
+
+**4. Transaction gas usage and limit**
+
+![Second account gas usage](../screenshots/Testing-DApp/Testing-secondAccountVoteDetails-GasUsed.png)
+
+**5. Blockchain voting event evidence**
+
+![Second account voting event](../screenshots/Testing-DApp/Testing-secondAccountVoteEvidence.png)
+
+**6. Final updated voting results**
+
+![Final voting results](../screenshots/Testing-DApp/Testing-FinalVoteCounts.png)
 
 ### Result
 
-The second account was successfully connected and identified as eligible to vote. The voting transaction and on-chain verification remain pending until the account receives Sepolia test ETH.
+The experiment was successfully completed. The second Ethereum account independently cast a vote for Candidate B, and the transaction was confirmed on the Sepolia Testnet.
+
+The final voting results showed one vote each for Candidate A and Candidate B, demonstrating that multiple eligible Ethereum accounts can independently participate in the decentralized voting application.
 
 ---
 
@@ -197,15 +248,15 @@ require(
 | Candidate | Votes after validation |
 |---|---:|
 | Candidate A | 1 |
-| Candidate B | 0 |
+| Candidate B | 1 |
 | Candidate C | 0 |
-| **Total Votes** | **1** |
+| **Total Votes** | **2** |
 
 ### Result
 
 Invalid candidate ID validation was verified. The contract's validation condition identified candidate ID `4` as invalid, and the existing voting results remained unchanged.
 
-Note: MetaMask detected the failure during transaction simulation, and the transaction was rejected before being submitted to the blockchain. Therefore, this was not a mined failed transaction.
+**Note:** MetaMask detected the failure during transaction simulation, and the transaction was rejected before being submitted to the blockchain. Therefore, this was not a mined failed transaction. The vote counts shown here represent the state at the time Experiment D was performed, before Experiment C was completed.
 
 ---
 
@@ -215,15 +266,16 @@ The testing experiments demonstrated the following properties of the Decentraliz
 
 1. **Successful Voting:** Eligible accounts can cast votes, and successful transactions update the blockchain state.
 2. **Duplicate Voting Prevention:** The smart contract tracks voters and prevents an account from voting more than once.
-3. **Multiple Account Support:** A second account can connect and is recognized as eligible when it has not previously voted. Its successful transaction is pending.
+3. **Multiple Account Support:** Different eligible Ethereum accounts can independently connect to the application and cast votes.
 4. **Input Validation:** The smart contract rejects invalid candidate IDs and prevents invalid voting operations.
+5. **Blockchain Transparency:** Transactions and voting events can be independently inspected using a public blockchain explorer.
 
-The experiments also demonstrated the integration between the Solidity smart contract, MetaMask wallet, VOTEX frontend, and Ethereum Sepolia Testnet.
+The experiments also demonstrated the integration between the Solidity smart contract, MetaMask wallet, VOTEX frontend, ethers.js, and Ethereum Sepolia Testnet.
 
 ## Conclusion
 
-The Decentralized Voting DApp was successfully tested for successful voting, duplicate voting prevention, and invalid candidate ID validation on the Ethereum Sepolia Testnet.
+The Decentralized Voting DApp was successfully tested for successful voting, duplicate voting prevention, voting from multiple Ethereum accounts, and invalid candidate ID validation on the Ethereum Sepolia Testnet.
 
-The second-account voting experiment is partially completed and will be updated after obtaining Sepolia test ETH and verifying the second voting transaction.
+All four experiments were completed. The second-account voting experiment confirmed that multiple eligible users can independently participate in the election, while the smart contract maintains the correct voting records.
 
-The testing confirms that blockchain-based voting operations are recorded through smart contract transactions and that essential validation mechanisms help maintain the integrity of the voting process.
+The testing confirms that blockchain-based voting operations are recorded through smart contract transactions and that essential validation mechanisms help maintain the integrity, transparency, and reliability of the voting application.
